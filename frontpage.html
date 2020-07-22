@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="NB">
+<!--candidate num:102, 213,147-->
+<head>
+  <meta charset="UTF-8">
+  <!-- Meta is important when we want to have different sizes of the web browser -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="stylecss.css" type="text/css">
+  <script src="javascriptjs.js"></script>
+  <title> Norges befolkning - data </title>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>Norges befolkning - data</h1>
+  </div>
+
+  <!-- Buttons to show introduksjon, oversikt,detaljer and sammenligning -->
+  <!-- Calls the hideIt function in the javascript file -->
+  <nav class="buttons">
+    <ul>
+      <li><input type="button" id="introButt" value="Introduksjon" onclick="hideIt('introduction');" disabled></li>
+      <li><input type="button" id="overButt" value="Oversikt" onclick="overviewIt('overview');" disabled></li>
+      <li><input type="button" id="detailButt" value="Detaljer" onclick="hideIt('details');" disabled></li>
+      <li><input type="button" id="compButt" value="Sammenligning" onclick="hideIt('comparison');" disabled></li>
+    </ul>
+  </nav>
+
+  <!-- Overview over the four eluents in the web browser -->
+  <main class="main">
+    <div id="introduction">
+      <article class="text-i">
+      <h1 class=headerMain>Informasjon om nettstedet og tjenesten</h1>
+        <section>
+          <p id="text-info">Dette nettstedet er et verktøy for å vise data om Norges befolkning ved hjelp av data fra Statistisk sentralbyrå.<br><br>
+
+            <u>Oversikt</u> viser alle kommunene i Norge med navn, kommunenummer, og siste måling av total befolkning. <br><br>
+            <u>Detaljer</u> viser en mer detaljert informasjon ved å søke på et kommunenummer.
+            Søkeresultatet vil vise en oversikt med kommunens navn, kommunenummer, siste målt befolkning,
+            siste målte statistikk for sysselsetning og høyere utdanning.<br><br>
+
+            <u>Sammenligning</u> er et verktøy for å sammenligne to kommuner ved å skrive inn to gyldige kommunenummer.
+            Her vil man kunne se historisk data for utvikling av sysselsetning for menn og kvinner i begge kommunene.
+            Høyest vekst vil bli markert ved oransj skrift.</p>
+        </section>
+
+
+
+        <section>
+          <!-- Information about the data that will be presented in the web browser-->
+          <p id="note"> OI! Tallene kan inneholde feil og det kan være avvik i dataen som blir presentert.</p><br><br>
+          <p><u>Lenker til SSB-sine datasett:</u></p>
+          <ul class="allLinks">
+            <li><a href="http://data.ssb.no/api/v0/dataset/104857?lang=no">Befolkning etter kjønn - Kommuner pr 1.1.2007 - siste år</a></li>
+            <li><a href="http://data.ssb.no/api/v0/dataset/100145?lang=no">Sysselsatte pr. 4. kv. etter kjønn og alder, andel i prosent. Kommuner, 2005 - siste år</a></li>
+            <li><a href="http://data.ssb.no/api/v0/dataset/85432?lang=no">Utdannningsnivå. Personer fra 16 år og over etter kjønn, i prosent. Kommuner 1970 - siste år</a></li>
+          </ul>
+        </section>
+      </article>
+    </div>
+
+
+    <!-- overView over municipality by name, municipality number and last population measuring -->
+    <div id="overview">
+      <div id="allMunici">
+      </div>
+    </div>
+
+    <!--want the user to type in a municipality number and then give the rigth information -->
+    <div id="details">
+      <input type="text" placeholder="Kommunenummer" id="cityNum">
+      <button id="knapp" onclick="tableOverview()">Søk</button>
+      <div id="infoArea">
+      </div>
+      <div id="befolkning">
+      </div>
+      <div id="sysselsatte">
+      </div>
+      <div id="educated">
+      </div>
+    </div>
+
+
+
+    <!-- Want the user to write in two municipality numbers and then show the data and the development for
+    "sysselsetting" -->
+    <div id="comparison">
+      <input type="text" placeholder="Kommune-1" id="compNum1">
+      <button id="SL" onclick="compare()">Sammenligne</button>
+      <input type="text" placeholder="Kommune-2" id="compNum2">
+      <div id="compareEachOther">
+      </div>
+    </div>
+
+
+  </main>
+  <!--Footer-->
+  <footer class="footer">
+    <p id="footer-info">Oppgavebesvarelse INFO134</p>
+  </footer>
+</body>
+
+</html>
