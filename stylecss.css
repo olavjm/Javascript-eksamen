@@ -1,0 +1,190 @@
+/*candidate num:102, 213,147*/
+/*General css */
+
+*{
+  margin:0;
+}
+
+html, body{
+  background-color: ##c8e7dd;
+  height: 100%;
+}
+
+main{
+  padding:25px;
+  min-height: 100%
+}
+
+.headerMain{
+  padding-bottom:20px;
+  text-decoration: underline;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #eeba77;
+  color: white;
+  font-size: 30px;
+}
+
+/* link style */
+.allLinks, a, a:visited{
+  text-decoration: none;
+}
+
+ul.allLinks{
+  margin-top:15px;
+}
+
+.allLinks li{
+  margin-bottom:35px;
+}
+
+
+/*Table*/
+#table-1 td{font-size:15px;padding: 5px}
+#table-2 td{font-size:15px;padding: 5px}
+#table-3 td{font-size:15px;padding: 2px}
+
+
+td, input{
+  font: serif;
+}
+
+table, th, td{
+  border: solid 2px #333;
+  border-collapse: collapse;
+  white-space: pre-wrap;
+  padding: 10px 10px;
+  text-align: center;
+  min-width: 20%;
+
+}
+
+
+/*Mobile*/
+
+/* Manipulating the table to be vertikal when the screen is small */
+@media screen and (max-width: 513px){
+  tr { display: block; float: left; }
+  td { display: block; }
+  #antall{padding-left:15px}
+  #amount{padding-left:15px}
+  #allMunici,table,td,tr{font-size:9px; padding:0;}
+  #allMunici,table{border:none;}
+  }
+
+  /* Scroll-bar */
+  ::-webkit-scrollbar{
+    width:0px;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: rgb(233, 164, 73)
+  }
+
+/*Introduction text style*/
+#introduction{
+  display:block;
+  flex-direction: row;
+  font-size: auto;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  font-size: small;
+}
+
+.text-i{
+  max-width:500px;
+}
+
+#note{
+  font-weight: bold;
+  padding-top:10px;
+}
+
+
+/*Nav bar*/
+ .buttons ul{
+    display:block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    white-space: nowrap;
+    position: sticky;
+    overflow: hidden;
+
+ }
+
+.buttons li {
+    display: block;
+    color: #white;
+    float:left;
+    text-decoration: none;
+    align-items: center;
+
+  }
+
+.buttons li:hover {
+    background-color: #111;
+  }
+
+/*buttons */
+input[type="button"]{
+  display: flex;
+  border: none;
+  background: none;
+  cursor:pointer;
+  color:white;
+  padding:40px;
+}
+
+
+/*block elements*/
+
+#befolkning, #sysselsatte, #educated{
+  overflow-x:scroll;
+}
+
+#overview{
+  display:none;
+  max-width: 100%;
+  overflow-x:scroll;
+  overflow-y:scroll;
+  max-height: 550px;
+}
+
+#details{
+display:none;
+}
+
+#comparison {
+display:none;
+}
+
+#compareEachOther{
+  padding-top:10px;
+  overflow-x:scroll;
+}
+
+
+#infoArea{
+  padding:10px;
+}
+
+/*Footer*/
+.footer{
+  background-color:#5b380b;
+  color:white;
+  bottom:0;
+  width:100%;
+  font-size:20px;
+  height:auto;
+  overflow:hidden;
+  text-align:center;
+}
+
+#footer-info{
+  margin:2px;
+}
