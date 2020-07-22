@@ -1,5 +1,3 @@
-//candidate number:102, 213,147
-
 //Constructor
 function Constructor(file) {
   this.data = undefined;
